@@ -25,6 +25,9 @@ async function fetchFromBackend(endpoint: string) {
 }
 
 export async function POST(req: Request) {
+  return NextResponse.json({
+  answer: "TEST OK — endpoint /api/chat está funcionando",
+});
   try {
     const { message } = await req.json();
 
